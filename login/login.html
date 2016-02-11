@@ -1,0 +1,32 @@
+<h1>Institution Login</h1>
+<h2>Institution Details</h2>
+<div>
+  <p>Call me if you have any questions! (314) 703-8829</p>
+  <p>Take care to implement as many validations as you can.  Make sure you take into consideration the audience.  They won't understand things just "not working".  Be clear and obvious with messages.  Create the best UI/UX experience for this object.</p>
+
+  <p>To communicate with the "other side", you can use login.{property|method}.  I have left you a simple example to show how that might work.</p>
+
+  <input type="text" ng-model="login.hello" placeholder="enter name">
+  <button class="btn btn-default" ng-click="login.sayHello()">Click</button>
+
+
+  <p>I have bootstrap installed.  Please try to use it to your advantage!</p>
+</div>
+
+<div>
+  <p>Below is a json object for an institution.  Your job is to implement this in more human readable format (i.e. a web form).</p>
+  <pre>{{login.bank}}</pre>
+  <p>On this Bank, there are some login parameters, typically a user id and a password.  This one is different though.  View LoginParameters under this bank, and implement a dynamic form for all of the values it expects from a user. Each LoginParameter has some values, let's inspect</p>
+  <pre>{"LoginParameterKey":30972,"ParamId":"35562","ParamNumber":"1","ParamType":"login","ParamMaxLength":32,"ParamSize":42,"ParamCaption":"Online ID","ParamVariableName":"onlineID","ParamDefaultValue":"","ParamEditable":true,"ParamSensitivityCode":"N"}</pre>
+  <p>I have started the form. I would like you to bootstrap the form and make it rock solid using the dynamic values in the object. (i.e. If there is a ParamMaxLength of 32, I shouldn't be able to enter more than 32 characters).  <a href="https://docs.angularjs.org/guide/forms" target="_blank">Angular Forms</a></p>
+  <p>Pay careful attention to sensitive fields, is there a better way to do the "Passcode" field? (hint: see if using the ParamType for the input type may work)</p>
+</div>
+
+<h2>Login to {{login.bank.Name}}</h2>
+<div class="anInput" ng-repeat="loginParam in login.bank.LoginParameters track by $index">
+  {{loginParam.ParamCaption}}
+  <input type="text" ng-model="login.form[loginParam.ParamVariableName]">
+</div>
+<div class="submit">
+  <button class="btn btn-danger" ng-click="login.submit()">Submit</button>
+</div>
