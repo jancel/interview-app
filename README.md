@@ -12,7 +12,7 @@ Next, install this generator:
     npm install -g generator-cg-angular
 
 Documentation
-1. More on the build pack [cg-angular](https://github.com/cgross/generator-cg-angular)
-1. More on angular [AngularJS](https://docs.angularjs.org/api)
-1. More on bootstrap [Bootstrap](http://getbootstrap.com/)
-1. More on the best practices [AngularJS StyleGuide](https://github.com/johnpapa/angular-styleguide)
+* More on the build pack [cg-angular](https://github.com/cgross/generator-cg-angular)
+* More on angular [AngularJS](https://docs.angularjs.org/api)
+* More on bootstrap [Bootstrap](http://getbootstrap.com/)
+* More on the best practices [AngularJS StyleGuide](https://github.com/johnpapa/angular-styleguide)
